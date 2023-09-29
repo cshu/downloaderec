@@ -1,0 +1,18 @@
+[package]
+name = "downloaderec"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+scopeguard = "*"
+log = "*"
+env_logger = "*"
+reqwest = {version= "*", features = ["blocking"]}
+crabrs = { path = "../crabrs" }
+crabwebrs = { path = "../crabwebrs" }
+
+[profile.release]
+debug = 1
+
